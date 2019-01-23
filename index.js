@@ -14,17 +14,11 @@ function searchRepositories() {
   });
 }
 
-var renderRepositories = (repos) => {
-  return repos.items.map(repo => {
-    return renderSearchResult(repo)
-  })
+function renderRepositories(data) {
+  console.log("data=", data);
+  console.log("type of data=", typeof(data));
+  data.map(result=> renderSearchResult(result))
 }
-
-// function renderRepositories(data) {
-//   console.log("data=", data);
-//   console.log("type of data=", typeof(data));
-//   data.map(result=> renderSearchResult(result))
-// }
 
 function renderSearchResult(result) {
   return `
