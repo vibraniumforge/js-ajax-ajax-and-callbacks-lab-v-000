@@ -7,14 +7,12 @@ function displayError() {
 
 function searchRepositories() {
   const username = $("#searchTerms").val();
-  $.get(`https://api.github.com/repositories/?q=${username}`, response => {
+  $.get(`https://api.github.com/repositories?q=${username}`, response => {
     $("#results").html(renderRepositories(response))
   }).fail(function(error) {
     displayError(error);
   });
 }
-
-expect(requests[0].url).toMatch(/https:\/\/api.github.com\/search\/repositories\?q=tetris/)
 
 function renderRepositories(data) {
   debugger;
