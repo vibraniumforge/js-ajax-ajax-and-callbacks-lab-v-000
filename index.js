@@ -15,6 +15,9 @@ function searchRepositories() {
   });
 }
 
+function renderRepositories(data) {
+  data.items.map(result=> renderSearchResult(result)
+}
 function showRepositories(result) {
   return `
     <div>
