@@ -15,9 +15,11 @@ function searchRepositories() {
   });
 }
 
-function showRepositories(results) {
-  let result = template(results);
-  document.getElementById('results').innerHTML = result;
+function showRepositories(result) {
+  return 
+    <div>
+      <h2><a href="${result.html_url}">${result.name}</a>
+    </div>
 }
 
 function showCommits(el) {
