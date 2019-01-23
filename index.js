@@ -16,7 +16,7 @@ function searchRepositories() {
 
 const renderRepositories = (repos) => {
   return repos.items.map(repo => {
-    return renderRepository(repo)
+    return renderSearchResult(repo)
   })
 }
 
