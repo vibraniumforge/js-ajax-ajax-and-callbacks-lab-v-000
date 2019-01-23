@@ -9,7 +9,7 @@ function displayError() {
 function searchRepositories() {
   const username = $("#searchTerms").val();
   $.get(`https://api.github.com/users/${username}/repos`, data=> {
-    $("#results").html(showRepositories(data));
+    $("#results").html(renderRepositories(data));
   }).fail(function(error) {
     displayError(error);
   });
@@ -18,7 +18,8 @@ function searchRepositories() {
 function renderRepositories(data) {
   data.items.map(result=> renderSearchResult(result)
 }
-function showRepositories(result) {
+
+function renderSearchResult(result) {
   return `
     <div>
       <h3><a href="${result.html_url}">${result.name}</a></h3>
