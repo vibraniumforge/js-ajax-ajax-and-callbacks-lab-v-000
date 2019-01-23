@@ -4,10 +4,12 @@ $(document).ready(function(){
 function displayError() {
     $("#errors").text("I'm sorry, there's been an error. Please try again.");
 }
+// `https://api.github.com/users/${username}/repos`
+
 
 function searchRepositories() {
   const username = $("#searchTerms").val();
-  $.get(`https://api.github.com/users/${username}/repos`, response => {
+  $.get(`https:/api.github.com/search/repositories/?q=${username}/`, response => {
     $("#results").html(renderRepositories(response))
   }).fail(function(error) {
     displayError(error);
