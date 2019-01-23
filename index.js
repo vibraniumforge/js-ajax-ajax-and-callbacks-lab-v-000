@@ -7,7 +7,7 @@ function displayError() {
 }
 
 function searchRepositories() {
-  const username = $("#searchTerms")[0].value;
+  const username = $("#searchTerms").val;
   $.get(`https://api.github.com/users/${username}/repos`, data=> {
     $("#results").html(showRepositories(data));
   }).fail(function(error) {
