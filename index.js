@@ -16,9 +16,9 @@ function searchRepositories() {
 }
 
 function showRepositories(result) {
-  return 
+  return
     <div>
-      <h2><a href="${result.html_url}">${result.name}</a>
+      <h3><a href="${result.html_url}">${result.name}</a></h3>
     </div>
 }
 
