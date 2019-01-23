@@ -1,15 +1,14 @@
-
 $(document).ready(function(){
   handlebarsFunction();
 });
 
+function displayError = () => {
+    $("#errors").text("I'm sorry, there's been an error. Please try again.");
+}
+
 function handlebarsFunction() {
   Handlebars.registerPartial('userDetails', $('#user-details-partial').html()
 );
-}
-
-function displayError() {
-  $("#errors").text("I'm sorry, there's been an error. Please try again.");
 }
 
 function searchRepositories() {
