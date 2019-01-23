@@ -44,7 +44,7 @@ function renderCommits(data) {
   return `<ul>${result}</ul>`
 }
 
-function renderCommit(result) {
+function renderCommit(commit) {
   return  `<li><h3>${commit.sha}</h3><p>${commit.commit.message}</p></li>`
 }
 
