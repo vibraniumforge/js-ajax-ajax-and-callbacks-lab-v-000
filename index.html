@@ -47,12 +47,13 @@
             <p>Name: {{name}}</p>
             <p>Description: {{description}}</p>
             <a href="{{html_url}}">Link</a>
-            <a data-repository="{{name}}" data-owner="{{owner.login}}" onclick="showCommits(this); return false;" href="#">Show all Commits</a>
+            <a data-repository="{{name}}" data-owner="{{owner.login}}" onclick="showCommits(this);return false;" href="#">Show all Commits</a>
             {{>userDetails owner }}
         </li>
         {{/each}}
       </ul>
     </script>
+
     <script id="user-details-partial" type="text/x-handlebars-template">
       <section>
         <h4>Created By {{login}}</h4>
@@ -60,6 +61,7 @@
         <a href="{{html_url}}">User's Profile</a>
       </section>
     </script>
+
     <script id="commits-template" type="text/x-handlebars-template">
       <section>
         <ul>
@@ -71,5 +73,6 @@
         </ul>
       </section>
     </script>
+
   </body>
 </html>

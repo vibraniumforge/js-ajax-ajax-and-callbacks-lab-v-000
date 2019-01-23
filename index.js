@@ -29,10 +29,9 @@ function showRepositories(results) {
 }
 
 function showCommits(el) {
-  const repositories = el.dataset.repository;
+  const repository = el.dataset.repository;
   const owner = el.dataset.owner;
-  const commits_url = `https://api.github.com/repos/${owner}/repo/commits`;
-  $.getJSON(commits_url, function(response) {
+  $.getJSON(`https://api.github.com/repos/${owner}/${repository}/commits`, function(response) {
     results = response.items;
     console.log("results=", results);
     showCommits(results);
