@@ -14,7 +14,7 @@ function searchRepositories() {
   });
 }
 
-const renderRepositories = (repos) => {
+var renderRepositories = (repos) => {
   return repos.items.map(repo => {
     return renderSearchResult(repo)
   })
