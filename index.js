@@ -7,7 +7,7 @@ function displayError() {
 
 function searchRepositories() {
   const username = $("#searchTerms").val();
-  $.getJSON(`https://api.github.com/users/${username}/repos`, data=> {
+  $.get(`https://api.github.com/users/${username}/repos`, data=> {
     $("#results").html(renderRepositories(data))
   }).fail(function(error) {
     displayError(error);
@@ -32,7 +32,7 @@ function renderSearchResult(result) {
 function showCommits(el) {
   const repository = el.dataset.repository;
   const owner = el.dataset.owner;
-  $.getJSON(`https://api.github.com/repos/${owner}/${repository}/commits`, data => {
+  $.get(`https://api.github.com/repos/${owner}/${repository}/commits`, data => {
     $("#details").text(renderCommits(data));
   }).fail(function(error) {
     displayError(error);
