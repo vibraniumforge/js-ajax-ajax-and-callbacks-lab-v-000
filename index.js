@@ -8,7 +8,7 @@ function displayError() {
 function searchRepositories() {
   const username = $("#searchTerms").val();
   $.get(`https://api.github.com/users/${username}/repos`, response => {
-    $("#results").html(renderRepositories(data))
+    $("#results").html(renderRepositories(response))
   }).fail(function(error) {
     displayError(error);
   });
