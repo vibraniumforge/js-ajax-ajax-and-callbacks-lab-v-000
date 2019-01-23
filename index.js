@@ -16,6 +16,7 @@ function searchRepositories() {
 
 function renderRepositories(data) {
   console.log("data=", data);
+  console.log("type of data=", typeof(data));
   data.map(result=> renderSearchResult(result))
 }
 
