@@ -33,7 +33,7 @@ function showCommits(el) {
   const repository = el.dataset.repository;
   const owner = el.dataset.owner;
   $.getJSON(`https://api.github.com/repos/${owner}/${repository}/commits`, data => {
-    $("#details").html(renderCommits(data));
+    $("#details").text(renderCommits(data));
   }).fail(function(error) {
     displayError(error);
   });
