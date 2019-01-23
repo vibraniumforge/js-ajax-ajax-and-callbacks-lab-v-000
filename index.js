@@ -14,6 +14,7 @@ function searchRepositories() {
   });
 }
 
+
 function renderRepositories(data) {
   debugger;
   return data.map(result=> renderSearchResult(result))
