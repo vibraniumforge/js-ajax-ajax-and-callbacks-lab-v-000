@@ -14,7 +14,7 @@ function searchRepositories() {
   });
 }
 
-var renderRepositories  = (data) => data.map(result => renderSearchResult(result))
+let renderRepositories  = (data) => data.map(result => renderSearchResult(result))
 
 // function renderRepositories(data) {
 //   console.log("data=", data);
