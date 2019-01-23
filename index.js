@@ -33,14 +33,14 @@ function showCommits(el) {
   const repository = el.dataset.repository;
   const owner = el.dataset.owner;
   $.get(`https://api.github.com/repos/${owner}/${repository}/commits`, data => {
-    $("#details").text(renderCommits(data));
+    $("#details").html(renderCommits(data));
   }).fail(function(error) {
     displayError(error);
   });
 }
 
 function renderCommits(data) {
-  let result=data.map(commit => renderCommit(commit).join(""))
+  let result = data.map(commit => renderCommit(commit).join(""))
   return `<ul>${result}</ul>`
 }
 
