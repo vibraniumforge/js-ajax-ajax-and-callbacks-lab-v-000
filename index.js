@@ -44,6 +44,9 @@ function renderCommits(data) {
   return `<ul>${result}</ul>`
 }
 
+function renderCommit(result) {
+  return  `<li><h3>${commit.sha}</h3><p>${commit.commit.message}</p></li>`
+}
 function displayCommits(results) {
   let template = Handlebars.compile($("#commits-template").html());
   let result = template(results);
