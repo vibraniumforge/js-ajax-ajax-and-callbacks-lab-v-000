@@ -6,11 +6,6 @@ function displayError() {
     $("#errors").text("I'm sorry, there's been an error. Please try again.");
 }
 
-function handlebarsFunction() {
-  Handlebars.registerPartial('userDetails', $('#user-details-partial').html()
-);
-}
-
 function searchRepositories() {
   const username = $("#searchTerms")[0].value;
   $.get(`https://api.github.com/users/${username}/repos`, data=> {
