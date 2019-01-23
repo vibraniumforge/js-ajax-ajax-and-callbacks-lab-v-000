@@ -16,7 +16,6 @@ function searchRepositories() {
 }
 
 function showRepositories(results) {
-  var template = Handlebars.compile(document.getElementById("result-template").innerHTML);;
   let result = template(results);
   document.getElementById('results').innerHTML = result;
 }
