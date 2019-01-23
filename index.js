@@ -15,7 +15,7 @@ function searchRepositories() {
 }
 
 function renderRepositories(data) {
-  data.items.map(result=> renderSearchResult(result))
+  data.items.map(data=> renderSearchResult(result))
 }
 
 function renderSearchResult(result) {
