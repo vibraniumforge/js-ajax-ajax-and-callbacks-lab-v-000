@@ -14,7 +14,7 @@ function searchRepositories() {
   });
 }
 
-function renderRepositories([data]) {
+function renderRepositories(data) {
   console.log("data=", data);
   console.log("type of data=", typeof(data));
   Array.from(data).map(result=> renderSearchResult(result))
