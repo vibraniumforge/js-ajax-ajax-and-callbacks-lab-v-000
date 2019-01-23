@@ -20,11 +20,11 @@
   </head>
   <body>
     <main id="main">
-      <div id="errors"></div>
       <form style="padding 20px;">
         <input type="text" id="searchTerms">
         <a href="#" onclick="searchRepositories();return false;">Search</a>
       </form>
+      <div id="errors"></div>
     </main>
     <div class="flexbox-container">
       <div>
@@ -49,6 +49,11 @@
             <a href="{{html_url}}">Link</a>
             <a data-repository="{{name}}" data-owner="{{owner.login}}" onclick="showCommits(this);return false;" href="#">Show all Commits</a>
             {{>userDetails owner }}
+
+          <a href="#">Name: {{name}}</a>
+          <a href="#">Description: {{description}}</a>
+          <a href="#">Link: {{html_url}}</a>
+          {{> userDetails owner }}
         </li>
         {{/each}}
       </ul>
@@ -74,5 +79,30 @@
       </section>
     </script>
 
+    <script id="user-details-partial" type="text/x-handlebars-template">
+      <section>
+        <header><h4>Created By {{login}}</h4></header>
+        <img src="{{avatar_url}}" height="32" width="32">
+        <p>{{html_url}}</p>
+      </section>
+    </script>
+    <script id="user-details-partial" type="text/x-handlebars-template">
+      <section>
+        <header><h4>Created By {{login}}</h4></header>
+        <img src="{{avatar_url}}" height="32" width="32">
+        <p>{{html_url}}</p>
+      </section>
+    </script>
+    <script id="commits-template" type="text/x-handlebars-template">
+      <section>
+          <ul>
+            {{#each this}}
+              <li>
+                <p>{{sha}}</p>
+              </li>
+            {{/each}}
+          </ul>
+      </section>
+    </script>
   </body>
 </html>
