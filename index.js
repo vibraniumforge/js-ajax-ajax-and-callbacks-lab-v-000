@@ -8,13 +8,13 @@ function displayError() {
 function searchRepositories() {
   const username = $("#searchTerms").val();
   $.get(`https://api.github.com/users/${username}/repos`, data=> {
-    $("#results").html(renderRepositories(data))
+    $("#results").html(renderSearchResults (data))
   }).fail(function(error) {
     displayError(error);
   });
 }
 
-var renderRepositories = (data) => data.map( result => renderSearchResult(result))
+var renderSearchResults  = (data) => data.map( result => renderSearchResult(result))
 
 // function renderRepositories(data) {
 //   console.log("data=", data);
