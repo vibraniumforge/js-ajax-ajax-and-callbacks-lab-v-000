@@ -14,7 +14,7 @@ function searchRepositories() {
   });
 }
 
-expect(requests[0].url).toMatch(/https:\/\/api.github.com\/search\/repositories\?q=tetris/)
+// expect(requests[0].url).toMatch(/https:\/\/api.github.com\/search\/repositories\?q=tetris/)
 
 function renderRepositories(data) {
   debugger;
