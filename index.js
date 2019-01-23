@@ -2,7 +2,7 @@ $(document).ready(function(){
   handlebarsFunction();
 });
 
-function displayError = () => {
+function displayError() {
     $("#errors").text("I'm sorry, there's been an error. Please try again.");
 }
 
