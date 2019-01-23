@@ -39,7 +39,7 @@ function showCommits(el) {
 }
 
 function renderCommits(data) {
-  data.items.map(result => renderCommit(result).join(""))
+  data.map(result => renderCommit(result).join(""))
   return `<ul>${result}</ul>`
 }
 
