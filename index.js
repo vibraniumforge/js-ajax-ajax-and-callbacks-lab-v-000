@@ -40,7 +40,7 @@ function showCommits(el) {
 }
 
 function renderCommits(data) {
-  data.map(result => renderCommit(result).join(""))
+  let result=data.map(commit => renderCommit(result).join(""))
   return `<ul>${result}</ul>`
 }
 
