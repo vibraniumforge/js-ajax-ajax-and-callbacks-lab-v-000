@@ -16,7 +16,7 @@ function searchRepositories() {
 }
 
 function renderRepositories(data) {
-  data.items.map(result=> renderSearchResult(result)
+  data.items.map(result=> renderSearchResult(result))
 }
 
 function renderSearchResult(result) {
@@ -47,6 +47,7 @@ function renderCommits(data) {
 function renderCommit(result) {
   return  `<li><h3>${commit.sha}</h3><p>${commit.commit.message}</p></li>`
 }
+
 function displayCommits(results) {
   let template = Handlebars.compile($("#commits-template").html());
   let result = template(results);
