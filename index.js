@@ -25,7 +25,7 @@ function renderSearchResult(result) {
     <div>
       <h3><a href="${result.html_url}">${result.name}</a></h3>
       <p> <a href="#" data-repository="${result.name}" data-owner="${result.owner.login}" onclick="showCommits(this)">Show Commits</a></p>
-      <p>${result.description}</p>
+      <p>${result.description ?result.description : "No description" }</p>
     </div>
     <hr>
     `
